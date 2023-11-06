@@ -1,0 +1,42 @@
+#Kaller opp en funksjon med flagget, der toppFarge, mellomFarge og bunnFarge er variabler
+
+
+x=23
+#x er en variabel for størrelsen på flagget
+
+fun norFlagg(toppFarge, mellomFarge, bunnFarge):
+  overlay-align("left", "top", square(6.5 * x, "solid", toppFarge),
+    #topp venstre
+  
+    overlay-align("left", "bottom", square(6.5 * x, "solid", toppFarge),
+#nede venstre
+    
+      overlay-align("right", "top", rectangle(12.3 * x, 6.5 * x,"solid", toppFarge),
+#topp høyre
+      
+        overlay-align("right", "bottom", rectangle(12.3 * x, 6.5 * x,"solid", toppFarge),
+#nede høyre
+
+          overlay-align("left", "top", square(7.3 * x, "solid", mellomFarge),
+            #mellom1
+ 
+            overlay-align("left", "bottom", square(7.3 * x,"solid",mellomFarge),
+              #mellom2  
+    
+            overlay-align("right", "top", rectangle(13.1 * x, 7.3 * x, "solid", mellomFarge),
+                #mellom3
+      
+              overlay-align("right", "bottom", rectangle(13.1 * x , 7.3 * x, "solid", mellomFarge),
+                  #mellom4
+
+                  rectangle(22 * x, 16 * x, "solid", bunnFarge)))))))))
+  #kryss i midten
+end
+
+norge = norFlagg("red", "white", "blue")
+sverige = norFlagg("blue", "blue", "yellow")
+island = norFlagg("blue", "white", "red")
+faroyene = norFlagg("white", "blue", "red")
+danmark = norFlagg("red", "white", "white")
+finland = norFlagg("white", "blue", "blue")
+#her defineres fargekombinasjonen for hvert flagg
