@@ -1,0 +1,5 @@
+overlay-xy(rectangle(200, 50, "solid", "purple"), 0, -75,
+  overlay-xy(circle(55,"solid", "blue"), -90, 0,
+    overlay-xy(circle(55, "solid", "orange"), 0, -90,
+      overlay-xy(rectangle(50, 200, "solid", "green"), -75, 0,
+        square(200, "solid", "red")))))
